@@ -11,7 +11,6 @@ namespace MadisonPizzeria
 {
     public class Program
     {
-        // This is a comment to test the process of getting code back and forth.
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
