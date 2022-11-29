@@ -25,7 +25,7 @@ namespace MadisonPizzeria.Pages
         }
         public void OnGet()
         {
-            PageTitle = _config["HomePageTitle"];
+            PageTitle = _config["FAQPageTitle"];
         }
     }
 }
