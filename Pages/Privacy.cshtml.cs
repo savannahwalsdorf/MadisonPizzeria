@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -10,15 +11,21 @@ namespace MadisonPizzeria.Pages
 {
     public class PrivacyModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        //private readonly ILogger<PrivacyModel> _logger;
 
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        //public PrivacyModel(ILogger<PrivacyModel> logger)
+        //{
+        //  _logger = logger;
+        //}
+        private readonly IConfiguration _config;
+        public string PageTitle { get; set; }
+        public PrivacyModel(IConfiguration config)
         {
-            _logger = logger;
+            _config = config;
         }
-
         public void OnGet()
         {
+            PageTitle = _config["FAQPageTitle"];
         }
     }
 }
