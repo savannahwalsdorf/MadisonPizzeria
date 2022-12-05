@@ -2,14 +2,19 @@
 @model IndexModel
 @{
 }
-<h1>@Model.PageTitle</h1>
+<style type="text/css">
+	body {
+		background: #800000 !important;
+	}
+</style>
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+	<br />
+	<h1 class="text-light">@Model.PageTitle</h1>
 
-	<form>
-		<label for="email">Email: </label>
-		<input type="email" required /> <br />
-		<input type="submit" value="Submit">
-	</form>
+	<br />
+	<p class="text-light">Start your pizza journey with MadisonPizzera today!</p>
+	<br />
 
+	<a asp-page="/Order/Pizza" class="btn btn-dark btn-outline-light btn-lg">Start Order</a>
 </div>
