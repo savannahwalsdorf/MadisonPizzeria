@@ -5,7 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\data\" />
+    <Compile Remove="wwwroot\data\**" />
+    <Content Remove="wwwroot\data\**" />
+    <EmbeddedResource Remove="wwwroot\data\**" />
+    <None Remove="wwwroot\data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Models\Ingredient.cs" />
   </ItemGroup>
 
 </Project>

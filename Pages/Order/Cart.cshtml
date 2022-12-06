@@ -1,5 +1,10 @@
 ﻿@page
-@model MadisonPizzeria.Pages.Cart.IndexModel
+@model MadisonPizzeria.Pages.Cart.CartModel
 @{
 }
-<h1>@Model.PageTitle</h1>
+<h1 class="text-center">@Model.PageTitle</h1>
+
+
+<br/>
+<a asp-page="/Order/Pizza" class="btn btn-dark btn-outline-light btn-lg">Order More</a>
+<a asp-page="/Order/Place" class="btn btn-dark btn-outline-light btn-lg">Place Order</a>
